@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block body %}
+<style>
+    body *{
+        margin: 0;
+        padding: 0;
+    }
+    form{
+        margin-top: 4rem ;
+        background: linear-gradient(to bottom, rgb(0, 13, 70),rgb(2, 102, 184),rgb(0, 13, 70));
+        padding: 6rem 0;
+        border-radius:5px;
+        box-shadow: 5px 5px 15px 0px rgb(112, 112, 112) ;
+    }
+    b{
+        color: rgb(185, 245, 253);
+    }
+    form h1{
+        text-align: center;
+        color: rgb(185, 245, 253);
+    }
+    form table tr td a{
+        text-align:right;
+    }
+    table tr td{
+        padding: 1rem;
+    }
+    .btn{
+        background:linear-gradient(to bottom, rgb(0, 13, 70),rgb(1, 91, 165),rgb(0, 13, 70));
+        border: none;
+        transition:0.5s;
+    }
+    .btn-success:hover{
+        background:linear-gradient(to bottom, rgb(57, 131, 180),rgb(174, 217, 241),rgb(57, 131, 180));
+        color: black;
+        transform: scale(10px);
+        border:none;
+    }
+</style>
+
+ <div class="col-4 mx-auto">
+    <form action=""method="post">
+        <h1>Login</h1>
+        {{form.hidden_tag()}}
+        <table>
+            <tr>
+                <td><b>{{form.username.label}}</b></td>
+                <td>{{form.username()}}</td>
+            </tr>
+            <tr>
+                <td><b>{{form.password.label}}</b></td>
+                <td>{{form.password()}}</td>
+            </tr>
+            <tr>
+                <td>{{form.submit()}}</td>
+                <td><a href="{{url_for('signup')}}" class="btn btn-success">Signup</a></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{%endblock body%}

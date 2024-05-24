@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block body%}
+
+<style>
+    body{
+        text-align: center;
+        background: black;
+        background: linear-gradient(90deg,rgb(0, 0, 29) 0%, rgb(5, 90, 202) 40%, rgb(0, 162, 255) 100%);
+    }
+    div{
+        align-items: center;
+        
+        margin-top: 4rem;
+    }
+    a{
+        margin-bottom: 2rem;
+        
+    }
+.btn{
+    font-size: 1.5rem;
+    padding: 1rem 6rem;
+    border-radius: 40px;
+}
+    h1{
+        color: rgb(168, 232, 253);
+        margin-bottom: 4rem;
+        font-size: 4rem;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .btn-success{
+        background-color: rgb(3, 158, 209);
+        border: 1px solid white;
+        transition:0.5s;
+        box-shadow: rgb(168, 232, 253);
+    }
+    .btn-success:hover{
+        background-color: white;
+        color: black;
+        transform: scale(10px);
+        box-shadow: 10 10 10 10, rgb(255, 255, 255);
+        border: 1px solid rgb(3, 158, 209);
+    }
+</style>
+
+
+<div style="text-align:center;">
+    <h1>Mutulfund Details</h1>
+    <a href="{{url_for('login')}}" class="btn btn-success">Login</a> <br>
+    <a href="{{url_for('signup')}}" class="btn btn-success">Signup</a>
+</div>
+
+{% endblock body%}
